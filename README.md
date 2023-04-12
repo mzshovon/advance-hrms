@@ -12,7 +12,7 @@ A raw nodeJs project for the begineers.
   docker-compose up -d
 ```
 
-- Run npm start/ npm start local for local setup
+- After docker setup, run the below command from terminal
 ```bash
   docker-compose exec -it hrm_php_fpm bash
   composer update

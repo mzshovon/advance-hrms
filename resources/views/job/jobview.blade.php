@@ -13,7 +13,7 @@
             <!-- /Logo -->
             <!-- Header Title -->
             <div class="page-title-box float-left">
-                <h3>Soeng Souy</h3>
+                <h3>HRMS</h3>
             </div>
             <!-- /Header Title -->
             <!-- Header Menu -->
@@ -41,7 +41,7 @@
                             <img src="{{ URL::to('assets/img/flags/us.png') }}" alt="" height="16"> English
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ URL::to('assets/img/flags/kh.png') }}" alt="" height="16"> Khmer 
+                            <img src="{{ URL::to('assets/img/flags/kh.png') }}" alt="" height="16"> Khmer
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
                             <img src="{{ URL::to('assets/img/flags/fr.png') }}" alt="" height="16"> French
@@ -55,7 +55,7 @@
                     </div>
                 </li>
                 <!-- /Flag -->
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>

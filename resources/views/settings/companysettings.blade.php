@@ -26,7 +26,7 @@
         </div>
     </div>
     <!-- Sidebar -->
-    
+
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <!-- Page Content -->
@@ -47,13 +47,13 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Company Name <span class="text-danger">*</span></label>
-                                    <input class="form-control" type="text" value="Soeng Souy">
+                                    <input class="form-control" type="text" value="HRMS">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Contact Person</label>
-                                    <input class="form-control " value="Soeng Souy" type="text">
+                                    <input class="form-control " value="HRMS" type="text">
                                 </div>
                             </div>
                         </div>

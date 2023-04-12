@@ -47,7 +47,7 @@
                         <ul style="display: none;">
                             <li><a href="{{ route('all/employee/card') }}">All Employees</a></li>
                             <li><a href="{{ route('form/holidays/new') }}">Holidays</a></li>
-                            <li><a href="{{ route('form/leaves/new') }}">Leaves (Admin) 
+                            <li><a href="{{ route('form/leaves/new') }}">Leaves (Admin)
                                 <span class="badge badge-pill bg-primary float-right">1</span></a>
                             </li>
                             <li><a href="{{route('form/leavesemployee/new')}}">Leaves (Employee)</a></li>
@@ -65,7 +65,7 @@
                     <li class="submenu">
                         <a href="#" class="noti-dot">
                             <i class="la la-files-o"></i>
-                            <span> Sales </span> 
+                            <span> Sales </span>
                             <span class="menu-arrow"></span>
                         </a>
                         <ul style="display: none;">
@@ -180,7 +180,7 @@
                 </div>
             </div>
             <!-- /Page Header -->
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
@@ -189,7 +189,7 @@
                                 <div class="col-sm-6 m-b-20">
                                     <img src="{{ URL::to('assets/img/logo2.png') }}" class="inv-logo" alt="">
                                      <ul class="list-unstyled">
-                                        <li>Soeng Souy</li>
+                                        <li>HRMS</li>
                                         <li>3864 Quiet Valley Lane,</li>
                                         <li>Sherman Oaks, CA, 91403</li>
                                         <li>GST No:</li>

@@ -1,144 +1,6 @@
 @extends('layouts.master')
 @section('content')
 
-	<!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-inner slimscroll">
-            <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
-                    <li class="menu-title">
-                        <span>Main</span>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('home') }}">Admin Dashboard</a></li>
-                            <li><a href="{{ route('em/dashboard') }}">Employee Dashboard</a></li>
-                        </ul>
-                    </li>
-                    @if (Auth::user()->role_name=='Admin')
-                        <li class="menu-title"> <span>Authentication</span> </li>
-                        <li class="submenu">
-                            <a href="#" class="noti-dot">
-                                <i class="la la-user-secret"></i> <span> User Controller</span> <span class="menu-arrow"></span>
-                            </a>
-                            <ul style="display: none;">
-                                <li><a class="active" href="{{ route('userManagement') }}">All User</a></li>
-                                <li><a href="{{ route('activity/log') }}">Activity Log</a></li>
-                                <li><a href="{{ route('activity/login/logout') }}">Activity User</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                    <li class="menu-title"> <span>Employees</span> </li>
-                    <li class="submenu">
-                        <a href="#" class="noti-dot">
-                            <i class="la la-user"></i> <span> Employees</span> <span class="menu-arrow"></span>
-                        </a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('all/employee/card') }}">All Employees</a></li>
-                            <li><a href="{{ route('form/holidays/new') }}">Holidays</a></li>
-                            <li><a href="{{ route('form/leaves/new') }}">Leaves (Admin) 
-                                <span class="badge badge-pill bg-primary float-right">1</span></a>
-                            </li>
-                            <li><a href="{{route('form/leavesemployee/new')}}">Leaves (Employee)</a></li>
-                            <li><a href="{{ route('form/leavesettings/page') }}">Leave Settings</a></li>
-                            <li><a href="{{ route('attendance/page') }}">Attendance (Admin)</a></li>
-                            <li><a href="{{ route('attendance/employee/page') }}">Attendance (Employee)</a></li>
-                            <li><a href="departments.html">Departments</a></li>
-                            <li><a href="designations.html">Designations</a></li>
-                            <li><a href="timesheet.html">Timesheet</a></li>
-                            <li><a href="shift-scheduling.html">Shift & Schedule</a></li>
-                            <li><a href="overtime.html">Overtime</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title"> <span>HR</span> </li>
-                    <li class="submenu">
-                        <a href="#">
-                            <i class="la la-files-o"></i>
-                            <span> Sales </span> 
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <ul style="display: none;">
-                            <li><a href="estimates.html">Estimates</a></li>
-                            <li><a href="{{ route('form/invoice/view/page') }}">Invoices</a></li>
-                            <li><a href="payments.html">Payments</a></li>
-                            <li><a href="expenses.html">Expenses</a></li>
-                            <li><a href="provident-fund.html">Provident Fund</a></li>
-                            <li><a href="taxes.html">Taxes</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu"> <a href="#"><i class="la la-money"></i>
-                        <span> Payroll </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('form/salary/page') }}"> Employee Salary </a></li>
-                            <li><a href="{{ url('form/salary/view') }}"> Payslip </a></li>
-                            <li><a href="{{ route('form/payroll/items') }}"> Payroll Items </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu"> <a href="#"><i class="la la-pie-chart"></i>
-                        <span> Reports </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('form/expense/reports/page') }}"> Expense Report </a></li>
-                            <li><a href="{{ route('form/invoice/reports/page') }}"> Invoice Report </a></li>
-                            <li><a href="payments-reports.html"> Payments Report </a></li>
-                            <li><a href="employee-reports.html"> Employee Report </a></li>
-                            <li><a href="payslip-reports.html"> Payslip Report </a></li>
-                            <li><a href="attendance-reports.html"> Attendance Report </a></li>
-                            <li><a href="{{ route('form/leave/reports/page') }}"> Leave Report </a></li>
-                            <li><a href="{{ route('form/daily/reports/page') }}"> Daily Report </a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title"> <span>Performance</span> </li>
-                    <li class="submenu"> <a href="#"><i class="la la-graduation-cap"></i>
-                        <span> Performance </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('form/performance/indicator/page') }}"> Performance Indicator </a></li>
-                            <li><a href="{{ route('form/performance/page') }}"> Performance Review </a></li>
-                            <li><a href="{{ route('form/performance/appraisal/page') }}"> Performance Appraisal </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu"> <a href="#"><i class="la la-edit"></i>
-                        <span> Training </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="{{ route('form/training/list/page') }}"> Training List </a></li>
-                            <li><a href="{{ route('form/trainers/list/page') }}"> Trainers</a></li>
-                            <li><a href="{{ route('form/training/type/list/page') }}"> Training Type </a></li>
-                        </ul>
-                    </li>
-                    <li><a href="promotion.html"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
-                    <li><a href="resignation.html"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
-                    <li><a href="termination.html"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
-                    <li class="menu-title"> <span>Administration</span> </li>
-                    <li> <a href="assets.html"><i class="la la-object-ungroup">
-                        </i> <span>Assets</span></a>
-                    </li>
-                    <li class="submenu"> <a href="#"><i class="la la-briefcase"></i>
-                        <span> Jobs </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a href="user-dashboard.html"> User Dasboard </a></li>
-                            <li><a href="jobs-dashboard.html"> Jobs Dasboard </a></li>
-                            <li><a href="jobs.html"> Manage Jobs </a></li>
-                            <li><a href="manage-resumes.html"> Manage Resumes </a></li>
-                            <li><a href="shortlist-candidates.html"> Shortlist Candidates </a></li>
-                            <li><a href="interview-questions.html"> Interview Questions </a></li>
-                            <li><a href="offer_approvals.html"> Offer Approvals </a></li>
-                            <li><a href="experiance-level.html"> Experience Level </a></li>
-                            <li><a href="candidates.html"> Candidates List </a></li>
-                            <li><a href="schedule-timing.html"> Schedule timing </a></li>
-                            <li><a href="apptitude-result.html"> Aptitude Results </a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title"> <span>Pages</span> </li>
-                    <li class="submenu">
-                        <a href="#"><i class="la la-user"></i> <span> Profile </span> <span class="menu-arrow"></span></a>
-                        <ul style="display: none;">
-                            <li><a class="active" href="{{ route('profile_user') }}"> Employee Profile </a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 	<!-- /Sidebar -->
 
     <div class="page-wrapper">
@@ -260,7 +122,7 @@
                                                             </a>
                                                         </div>
                                                     </li>
-                                                @endif    
+                                                @endif
                                             </ul>
                                         </div>
                                     </div>
@@ -271,7 +133,7 @@
                     </div>
                 </div>
             </div>
-					
+
             <div class="card tab-box">
                 <div class="row user-tabs">
                     <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
@@ -283,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="tab-content">
                 <!-- Profile Info Tab -->
                 <div id="emp_profile" class="pro-overview tab-pane fade show active">
@@ -515,7 +377,7 @@
                     </div>
                 </div>
                 <!-- /Profile Info Tab -->
-                
+
                 <!-- Projects Tab -->
                 <div class="tab-pane fade" id="emp_projects">
                     <div class="row">
@@ -581,7 +443,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -644,7 +506,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -707,7 +569,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-lg-4 col-sm-6 col-md-4 col-xl-3">
                             <div class="card">
                                 <div class="card-body">
@@ -773,7 +635,7 @@
                     </div>
                 </div>
                 <!-- /Projects Tab -->
-                
+
                 <!-- Bank Statutory Tab -->
                 <div class="tab-pane fade" id="bank_statutory">
                     <div class="card">
@@ -914,7 +776,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <hr>
                                 <h3 class="card-title"> ESI Information</h3>
                                 <div class="row">
@@ -976,7 +838,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="submit-section">
                                     <button class="btn btn-primary submit-btn" type="submit">Save</button>
                                 </div>
@@ -1215,7 +1077,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Designation <span class="text-danger">*</span></label>
-                                        
+
                                         <select class="select" id="" name="designation">
                                             <option selected disabled>Select Designation</option>
                                             <option value="Web Designer">Web Designer</option>
@@ -1246,7 +1108,7 @@
         </div>
         <!-- /Profile Modal -->
         @endif
-    
+
         <!-- Personal Info Modal -->
         <div id="personal_info_modal" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1326,7 +1188,7 @@
             </div>
         </div>
         <!-- /Personal Info Modal -->
-        
+
         <!-- Family Info Modal -->
         <div id="family_info_modal" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1371,7 +1233,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>
@@ -1416,7 +1278,7 @@
             </div>
         </div>
         <!-- /Family Info Modal -->
-        
+
         <!-- Emergency Contact Modal -->
         <div id="emergency_contact_modal" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1460,7 +1322,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="card">
                                 <div class="card-body">
                                     <h3 class="card-title">Primary Contact</h3>
@@ -1501,7 +1363,7 @@
             </div>
         </div>
         <!-- /Emergency Contact Modal -->
-        
+
         <!-- Education Modal -->
         <div id="education_info" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1562,7 +1424,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>
@@ -1623,7 +1485,7 @@
             </div>
         </div>
         <!-- /Education Modal -->
-        
+
         <!-- Experience Modal -->
         <div id="experience_info" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1678,7 +1540,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title">Experience Informations <a href="javascript:void(0);" class="delete-icon"><i class="fa fa-trash-o"></i></a></h3>

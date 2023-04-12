@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="description" content="Smarthr - Bootstrap Admin Template">
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-        <meta name="author" content="Soeng Souy">
+        <meta name="author" content="HRMS">
         <meta name="robots" content="noindex, nofollow">
         <title>Settings - HRMS</title>
 		<!-- Favicon -->
@@ -77,7 +77,7 @@
                         </div>
                     </li>
                     <!-- /Flag -->
-				
+
 					<!-- Notifications -->
 					<li class="nav-item dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -163,7 +163,7 @@
 						</div>
 					</li>
 					<!-- /Notifications -->
-					
+
 					<!-- Message Notifications -->
 					<li class="nav-item dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -290,7 +290,7 @@
                         <i class="fa fa-ellipsis-v"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="profile.html">My Profile</a> 
+                        <a class="dropdown-item" href="profile.html">My Profile</a>
                         <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                     </div>
                 </div>

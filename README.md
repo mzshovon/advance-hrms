@@ -1,5 +1,5 @@
 
-# Server uptime monitoring
+# HRMS
 
 A raw nodeJs project for the begineers.
 
